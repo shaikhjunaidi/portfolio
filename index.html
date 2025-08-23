@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid - Web Developer & Graphic Designer</title>
+    <meta name="description" content="Portfolio of Junaid - Web Developer and Graphic Designer specializing in modern web experiences and creative design solutions.">
+    <meta name="keywords" content="web developer, graphic designer, portfolio, javascript, html, css, react">
+    <meta name="author" content="Junaid">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Junaid</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Junaid</span></h1>
+                <h2 class="hero-subtitle">Web Developer & Graphic Designer</h2>
+                <p class="hero-description">
+                    I create beautiful, functional web experiences that solve real-world problems.
+                    Passionate about clean code, user experience, and continuous learning.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="glass-btn glass-btn-primary">
+                        <i class="fas fa-briefcase"></i>View My Work
+                    </a>
+                    <a href="#contact" class="glass-btn">
+                        <i class="fas fa-paper-plane"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="k.jpg" alt="Profile" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Web developer with expertise in modern web technologies.
+                        I love turning complex problems into simple, beautiful, and intuitive solutions.
+                        My journey in tech started with curiosity and has evolved into a career focused on
+                        creating impactful digital experiences.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1+</h3>
+                            <p>Years Experience (Graphic design)</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Qualifications</h2>
+            <div class="education-grid">
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="year-badge">2027</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>BCA (Bachelor of Computer Applications)</h3>
+                        <p class="institution">Sharnabasava University</p>
+                        <div class="grade-badge">CGPA: 8.3</div>
+                    </div>
+                </div>
+                
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-university"></i>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>PUC (Pre-University Course)</h3>
+                        <p class="institution">Alsharya PU College</p>
+                        <div class="grade-badge">79.8%</div>
+                    </div>
+                </div>
+                
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-school"></i>
+                        <span class="year-badge">2022</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>SSLC (Secondary School)</h3>
+                        <p class="institution">Dolphin English Medium School</p>
+                        <div class="grade-badge">68.8%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category animate-slide-in">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-slide-in">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Canva</span>
+                        <span class="skill-item">Photoshop</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-slide-in">
+                    <h3>Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Web Design</span>
+                        <span class="skill-item">UI/UX</span>
+                        <span class="skill-item">API Integration</span>
+                        <span class="skill-item">Problem Solving</span>
+                        <span class="skill-item">Debugging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="education">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="education-grid">
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-certificate"></i>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Introduction to HTML</h3>
+                        <p class="institution">Simplilearn SkillUp</p>
+                        <div class="grade-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-certificate"></i>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Java Programming for Beginners</h3>
+                        <p class="institution">Simplilearn SkillUp</p>
+                        <div class="grade-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-certificate"></i>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Business Analytics with Excel</h3>
+                        <p class="institution">Microsoft + Simplilearn SkillUp</p>
+                        <div class="grade-badge">Certified</div>
+                    </div>
+                </div>
+
+                <div class="education-card animate-slide-in">
+                    <div class="card-header">
+                        <i class="fas fa-certificate"></i>
+                        <span class="year-badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Full Stack Java Development</h3>
+                        <p class="institution">Simplilearn SkillUp</p>
+                        <div class="grade-badge">Certified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-slide-in">
+                    <img src="cb.jpg" alt="Interactive 3D Cube" class="project-img">
+                    <div class="project-content">
+                        <h3>Interactive 3D Cube</h3>
+                        <p>A rotating 3D cube showcasing my skills and expertise in web development and design with smooth CSS animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="cube/index.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-slide-in">
+                    <img src="c.png" alt="Calculator App" class="project-img">
+                    <div class="project-content">
+                        <h3>Calculator App</h3>
+                        <p>A modern calculator application with advanced functionality and beautiful UI design.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="cal/index.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-slide-in">
+                    <img src="pd.webp" alt="Weather app" class="project-img">
+                    <div class="project-content">
+                        <h3>Password Generator App</h3>
+                        <p>A highly customizable, offline-first password generator that creates strong, cryptographically-secure passwords to protect your digital accounts.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="wet/index.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>junnuedits@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9353889571</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Iqbal Colony, Gulbarga</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/shaikh-junaid-jd135?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/shaikhjunaidi_?igsh=MWRrZHM3NG1ucjdhZQ==" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="cdb17cfb-a948-4644-b253-18a08aa4e7a5">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="glass-btn glass-btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Junaid. All rights reserved. Built with ❤️ and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
