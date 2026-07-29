@@ -536,3 +536,49 @@ a:hover {
     background: var(--primary-hover);
     transform: translateY(-5px);
 }
+
+/* ==========================================================================
+   Mobile Responsiveness Fixes
+   ========================================================================== */
+@media (max-width: 768px) {
+    .name.display-3 {
+        font-size: 2.5rem;
+    }
+    .typing-text {
+        font-size: 1.5rem;
+    }
+    .hero-content {
+        padding: 1rem 0;
+    }
+    .profile-img-container {
+        width: 240px;
+        height: 240px;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 3rem;
+    }
+    .glass-card {
+        padding: 1.5rem !important;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .social-icons {
+        justify-content: center !important;
+    }
+    .skill-card h4 {
+        font-size: 1.2rem;
+    }
+    .timeline-dot {
+        left: -43px;
+    }
+}
