@@ -540,45 +540,74 @@ a:hover {
 /* ==========================================================================
    Mobile Responsiveness Fixes
    ========================================================================== */
+@media (max-width: 991px) {
+    /* Navbar fix for mobile dropdown */
+    .glass-navbar {
+        background: var(--glass-bg);
+    }
+    .navbar-collapse {
+        background: var(--bg-color);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 10px 30px var(--glass-shadow);
+        border: 1px solid var(--glass-border);
+    }
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .name.display-3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .typing-text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .hero-content {
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
     .profile-img-container {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
     }
     .section-title h2 {
         font-size: 2rem;
     }
     .hero-section {
         padding-top: 100px;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
     }
     .glass-card {
-        padding: 1.5rem !important;
+        padding: 1.25rem !important;
     }
     .hero-buttons {
         flex-direction: column;
-        padding: 0 1rem;
+        width: 100%;
+        gap: 1rem !important;
     }
     .hero-buttons .btn {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
     }
     .social-icons {
         justify-content: center !important;
+        margin-top: 1rem;
     }
     .skill-card h4 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    .timeline {
+        padding-left: 15px;
     }
     .timeline-dot {
-        left: -43px;
+        left: -44px;
+        width: 16px;
+        height: 16px;
+    }
+    .project-img-wrapper {
+        min-height: 200px;
     }
 }
