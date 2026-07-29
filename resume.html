@@ -3,116 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Shaikh Junaid</title>
+    <title>Shaikh Junaid - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #1f2937;
+            --text-light: #4b5563;
+            --border: #e5e7eb;
+        }
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: #525659; /* Standard PDF viewer background */
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 40px 20px;
+            color: var(--text-main);
+            line-height: 1.5;
         }
-        .resume-container {
-            max-width: 800px;
+        .resume-wrapper {
+            width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
             margin: 0 auto;
-            background-color: #fff;
-            padding: 50px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            padding: 20mm;
+            box-sizing: border-box;
         }
+        
+        /* Header */
         .header {
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
         }
         .header h1 {
             margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
+            font-size: 2.5rem;
+            color: var(--text-main);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin: 5px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-            font-size: 0.9em;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
         .contact-info a {
-            color: #2980b9;
+            color: var(--text-light);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
         }
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
         .section {
             margin-bottom: 25px;
         }
         .section-title {
-            font-size: 1.2em;
-            color: #2c3e50;
-            border-bottom: 1px solid #ccc;
+            font-size: 1.1rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
             padding-bottom: 5px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
+        
+        .objective {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* Items */
         .item {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            margin-bottom: 4px;
         }
         .item-title {
-            font-weight: bold;
-            font-size: 1.1em;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
         }
         .item-subtitle {
             font-style: italic;
-            color: #555;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
         }
-        .item-date {
-            font-size: 0.9em;
-            color: #777;
-        }
+        
         ul {
-            margin-top: 5px;
-            padding-left: 20px;
+            margin: 0;
+            padding-left: 18px;
+            color: var(--text-light);
         }
         li {
             margin-bottom: 5px;
+            font-size: 0.95rem;
         }
+
+        /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 0.95rem;
         }
+        .skills-grid div {
+            color: var(--text-light);
+        }
+        .skills-grid strong {
+            color: var(--text-main);
+            width: 180px;
+            display: inline-block;
+        }
+
+        /* Print and Mobile Styles */
         @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
             body {
                 background-color: #fff;
                 padding: 0;
             }
-            .resume-container {
+            .resume-wrapper {
                 box-shadow: none;
-                padding: 0;
+                width: 100%;
+                min-height: auto;
+            }
+        }
+        
+        @media (max-width: 210mm) {
+            body {
+                padding: 10px;
+            }
+            .resume-wrapper {
+                width: 100%;
+                padding: 20px;
+                min-height: auto;
+            }
+            .skills-grid strong {
+                width: 100%;
+                display: block;
+                margin-bottom: 2px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <div class="resume-container">
+    <div class="resume-wrapper">
         <div class="header">
             <h1>Shaikh Junaid</h1>
-            <p style="margin: 5px 0; font-size: 1.1em;">Python Web Developer</p>
+            <div class="subtitle">Python Web Developer</div>
             <div class="contact-info">
-                <a href="mailto:me.junaid.in@gmail.com">me.junaid.in@gmail.com</a> |
-                <a href="https://www.linkedin.com/in/shaikh-junaid-a794a4405/" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/shaikhjunaidi" target="_blank">GitHub</a>
+                <a href="mailto:me.junaid.in@gmail.com"><i class="fas fa-envelope"></i> me.junaid.in@gmail.com</a>
+                <a href="https://www.linkedin.com/in/shaikh-junaid-a794a4405/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/shaikhjunaidi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Objective</div>
-            <p>To build a successful career as a Python Web Developer while mastering Data Structures and Algorithms using Python. Aiming to contribute to innovative software products by writing efficient, scalable, and maintainable code.</p>
+            <div class="objective">
+                To build a successful career as a Python Web Developer while mastering Data Structures and Algorithms using Python. Aiming to contribute to innovative software products by writing efficient, scalable, and maintainable code.
+            </div>
         </div>
 
         <div class="section">
@@ -120,7 +213,7 @@
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Bachelor of Computer Applications (BCA)</span>
-                    <span class="item-date">Expected Graduation: 2027</span>
+                    <span class="item-date">Expected 2027</span>
                 </div>
                 <div class="item-subtitle">Sharnbasva University</div>
                 <ul>
@@ -133,19 +226,19 @@
             <div class="section-title">Technical Skills</div>
             <div class="skills-grid">
                 <div>
-                    <strong>Programming Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL
+                    <strong>Programming Languages:</strong> Python, Java, JavaScript, HTML5, CSS3, SQL
                 </div>
                 <div>
-                    <strong>Frameworks:</strong> Django, Bootstrap, jQuery
+                    <strong>Frameworks & Libraries:</strong> Django, Bootstrap 5, jQuery
                 </div>
                 <div>
                     <strong>Databases:</strong> MySQL, SQLite
                 </div>
                 <div>
-                    <strong>Tools:</strong> Git, GitHub, VS Code
+                    <strong>Tools & Platforms:</strong> Git, GitHub, VS Code
                 </div>
-                <div style="grid-column: span 2;">
-                    <strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures & Algorithms, REST APIs, Responsive Design, SDLC
+                <div>
+                    <strong>Core Concepts:</strong> Object-Oriented Programming (OOP), Data Structures & Algorithms, REST APIs, Responsive Web Design, SDLC
                 </div>
             </div>
         </div>
@@ -155,8 +248,8 @@
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Crop Prediction System</span>
+                    <span class="item-date">Python, Django, ML</span>
                 </div>
-                <div class="item-subtitle">Python, Django, Machine Learning, HTML, CSS, JS</div>
                 <ul>
                     <li>Developed an intelligent crop recommendation web application that predicts the most suitable crop based on soil nutrients and environmental conditions.</li>
                     <li>Integrated user authentication and a clean, responsive dashboard for secure access.</li>
@@ -167,12 +260,12 @@
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Personal Developer Portfolio</span>
+                    <span class="item-date">HTML5, Bootstrap, JS</span>
                 </div>
-                <div class="item-subtitle">HTML5, CSS3, Bootstrap 5, JS</div>
                 <ul>
                     <li>Designed a fully responsive personal portfolio showcasing skills, projects, and achievements.</li>
                     <li>Developed a custom glassmorphism UI with a functioning dark/light mode toggle.</li>
-                    <li>Integrated interactive animations (particles.js, typed.js) and a live contact form.</li>
+                    <li>Integrated interactive animations (particles.js) and a live AJAX contact form.</li>
                 </ul>
             </div>
         </div>
@@ -180,8 +273,8 @@
         <div class="section">
             <div class="section-title">Certifications & Achievements</div>
             <ul>
-                <li><strong>Mind Marathon Winner</strong></li>
-                <li><strong>Python Essentials 1</strong> - Cisco Networking Academy</li>
+                <li><strong>Winner</strong> - Mind Marathon</li>
+                <li><strong>Python Essentials 1 Certification</strong> - Cisco Networking Academy</li>
                 <li><strong>Business Analytics with Excel</strong> - Microsoft x Simplilearn</li>
             </ul>
         </div>
