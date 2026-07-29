@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Shaikh Junaid</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .item {
+            margin-bottom: 15px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+        }
+        .item-date {
+            font-size: 0.9em;
+            color: #777;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>Shaikh Junaid</h1>
+            <p style="margin: 5px 0; font-size: 1.1em;">Python Web Developer</p>
+            <div class="contact-info">
+                <a href="mailto:me.junaid.in@gmail.com">me.junaid.in@gmail.com</a> |
+                <a href="https://www.linkedin.com/in/shaikh-junaid-a794a4405/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/shaikhjunaidi" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Objective</div>
+            <p>To build a successful career as a Python Web Developer while mastering Data Structures and Algorithms using Python. Aiming to contribute to innovative software products by writing efficient, scalable, and maintainable code.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Bachelor of Computer Applications (BCA)</span>
+                    <span class="item-date">Expected Graduation: 2027</span>
+                </div>
+                <div class="item-subtitle">Sharnbasva University</div>
+                <ul>
+                    <li>Relevant Coursework: Python Programming, Data Structures, DBMS, Web Technologies</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div>
+                    <strong>Programming Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL
+                </div>
+                <div>
+                    <strong>Frameworks:</strong> Django, Bootstrap, jQuery
+                </div>
+                <div>
+                    <strong>Databases:</strong> MySQL, SQLite
+                </div>
+                <div>
+                    <strong>Tools:</strong> Git, GitHub, VS Code
+                </div>
+                <div style="grid-column: span 2;">
+                    <strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures & Algorithms, REST APIs, Responsive Design, SDLC
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Crop Prediction System</span>
+                </div>
+                <div class="item-subtitle">Python, Django, Machine Learning, HTML, CSS, JS</div>
+                <ul>
+                    <li>Developed an intelligent crop recommendation web application that predicts the most suitable crop based on soil nutrients and environmental conditions.</li>
+                    <li>Integrated user authentication and a clean, responsive dashboard for secure access.</li>
+                    <li>Implemented machine learning models into the Django backend to serve accurate predictions.</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Personal Developer Portfolio</span>
+                </div>
+                <div class="item-subtitle">HTML5, CSS3, Bootstrap 5, JS</div>
+                <ul>
+                    <li>Designed a fully responsive personal portfolio showcasing skills, projects, and achievements.</li>
+                    <li>Developed a custom glassmorphism UI with a functioning dark/light mode toggle.</li>
+                    <li>Integrated interactive animations (particles.js, typed.js) and a live contact form.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications & Achievements</div>
+            <ul>
+                <li><strong>Mind Marathon Winner</strong></li>
+                <li><strong>Python Essentials 1</strong> - Cisco Networking Academy</li>
+                <li><strong>Business Analytics with Excel</strong> - Microsoft x Simplilearn</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
